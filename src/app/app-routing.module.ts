@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { BookingComponent } from './booking/booking.component';
+import { BookingComponent } from './bookings/bookings.component';
 import { CreateBookingComponent } from './create-booking/create-booking.component';
 
 const routes: Routes = [
@@ -8,7 +8,10 @@ const routes: Routes = [
     path:'bookings', component:BookingComponent
   },
   {
-    path:'createBooking', component:CreateBookingComponent
+    path:'create', component:CreateBookingComponent
+  },
+  {
+    path:'edit/:id', component:CreateBookingComponent
   },
   {
     path:'', redirectTo:'bookings', pathMatch:'full'

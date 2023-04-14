@@ -4,8 +4,8 @@ import { Bookings } from '../mock-bookings';
 
 @Component({
   selector: 'app-booking',
-  templateUrl: './booking.component.html',
-  styleUrls: ['./booking.component.css']
+  templateUrl: './bookings.component.html',
+  styleUrls: ['./bookings.component.css']
 })
 
 export class BookingComponent implements OnInit
