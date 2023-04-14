@@ -19,4 +19,10 @@ export class BookingComponent implements OnInit
   {
 
   }
+
+  delete(booking: Booking): void
+  {
+    var index = Bookings.indexOf(booking);
+    Bookings.splice(index,1);
+  }
 }
