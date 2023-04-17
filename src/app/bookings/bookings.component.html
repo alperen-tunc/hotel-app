@@ -1,4 +1,3 @@
-
 <div class="list-group" *ngFor="let booking of bookings">
     <div class="mb-2 list-group-item" aria-current="true">
       <div class="d-flex w-100 justify-content-between">
@@ -8,6 +7,5 @@
       </div>
       <p class="mb-1">Anfang: {{booking.startDate | date: "dd/MM/yy"}} - Ende: {{booking.endDate | date: "dd/MM/yy"}}</p>
       <small>Room: {{booking.roomNumber}}</small>
-    </div>
-    
+    </div>    
 </div>
