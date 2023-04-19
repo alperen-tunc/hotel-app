@@ -1,0 +1,30 @@
+<form #formSignup="ngForm">
+  <div [class.bg-danger]="formSignup.invalid" [class.bg-dark]="formSignup.valid" class="card">
+    <div class="card-header">
+        <h5>Event Benachrichtigungen</h5>
+    </div>
+
+    <div class="card-body">
+      <div class="row mb-2">
+        <div class="col">
+          <input #inputMail="ngModel" email minlength=5 name="signupMail" [(ngModel)]="signupMail" required class="form-control" placeholder="Bitte E-mail Adresse eintragen">
+        </div>
+      </div>
+      <div *ngIf="inputMail.invalid && (inputMail.touched || inputMail.dirty)" class="row mb-2">
+        <div class="col">
+
+          <div *ngIf="inputMail.errors" class="alert alert-danger">
+            Bitte geben Sie eine gültige E-Mail Adresse
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="card-footer">
+      <button [disabled]="formSignup.invalid" (click)="onSubmit()" class="btn btn-primary">Eintragen</button>
+    </div>
+  </div>
+
+
+</form>
