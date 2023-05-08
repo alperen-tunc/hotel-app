@@ -10,26 +10,26 @@ export class BookingService {
 
   constructor(private httpClient: HttpClient) { }
 
-  bookinsUrl: string = "/api/bookings";
+  bookingsUrl: string = "/api/bookings";
 
   getBookings() : Observable<Booking[]>
   {
-    return this.httpClient.get<Booking[]>(this.bookinsUrl);
+    return this.httpClient.get<Booking[]>(this.bookingsUrl);
   }
 
   deleteBooking(booking: Booking):  Observable<Booking>
   {
-    return this.httpClient.delete<Booking>(this.bookinsUrl + "/" + booking.id);
+    return this.httpClient.delete<Booking>(this.bookingsUrl + "/" + booking.id);
   }
 
   getBookingById(id: number): Observable<Booking>
   {
-    return this.httpClient.get<Booking>(this.bookinsUrl + "/" + id);
+    return this.httpClient.get<Booking>(this.bookingsUrl + "/" + id);
   }
 
   addBooking(booking: Booking): Observable<Booking>
   {
-    return this.httpClient.post<Booking>(this.bookinsUrl, booking);
+    return this.httpClient.post<Booking>(this.bookingsUrl, booking);
   }
 
 }
